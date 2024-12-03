@@ -80,12 +80,18 @@ POST /api/users
 hexagonal-express-api/
 ├── src/
 │   ├── application/
-│   │   └── create-user.use-case.ts
+│   │   ├── create-user.use-case.ts
+│   │   ├── find-user.use-case.ts
+│   │   └── find-all-users.use-case.ts
 │   ├── domain/
 │   │   ├── user.entity.ts
 │   │   └── user.repository.ts
-│   └── infrastructure/
-│       └── user.repository.mysql.ts
+│   ├── infrastructure/
+│   │   ├── http/
+│   │   │   └── user.controller.ts
+│   │   └── persistence/
+│   │       ├
+│   │       └── in-memory-user.repository.ts
 ├── tests/
 │   └── create-user.use-case.test.ts
 ├── package.json
