@@ -1,7 +1,7 @@
 import { CreateUserUseCase } from '@/application/create-user.use-case';
 import { FindUserUseCase } from '@/application/find-user.use-case';
 
-import { User, UserId } from '../../domain/user.entity';
+import { UserId } from '../../domain/user.entity';
 import { Request, Response } from 'express';
 
 export class UserController {
