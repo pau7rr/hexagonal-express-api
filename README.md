@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Hexagonal Express API es un proyecto que implementa una arquitectura hexagonal utilizando Node.js y Express. Este enfoque permite una separación clara de las preocupaciones, facilitando la prueba y el mantenimiento del código. El proyecto incluye un caso de uso para la creación de usuarios y un repositorio simulado para pruebas.
+Hexagonal Express API es un proyecto scaffolding que implementa una arquitectura hexagonal utilizando Node.js y Express. Este enfoque permite una separación clara de las preocupaciones, facilitando la prueba y el mantenimiento del código. El proyecto incluye un caso de uso para la creación de usuarios y un repositorio simulado para pruebas, lo que ayuda a los desarrolladores a comenzar rápidamente sin tener que construir la estructura desde cero.
 
 ## Ventajas
 
@@ -22,7 +22,7 @@ Hexagonal Express API es un proyecto que implementa una arquitectura hexagonal u
 1. Clona el repositorio:
 
    ```bash
-   git clone https://github.com/tu_usuario/hexagonal-express-api.git
+   git clone https://github.com/pau7rr/hexagonal-express-api.git
    cd hexagonal-express-api
    ```
 
@@ -38,12 +38,11 @@ Hexagonal Express API es un proyecto que implementa una arquitectura hexagonal u
 
 ### Ejecutar el Servidor
 
-Para iniciar el servidor, ejecuta:
+Para iniciar el servidor en local, ejecuta:
 
- ```bash
-   npm run dev
-   ```
-
+```bash
+npm run dev
+```
 
 El servidor se ejecutará en `http://localhost:3000` (o el puerto que hayas configurado).
 
@@ -52,9 +51,8 @@ El servidor se ejecutará en `http://localhost:3000` (o el puerto que hayas conf
 Para ejecutar las pruebas, utiliza:
 
 ```bash
-   npm run test
-   ```
-
+npm run test
+```
 
 Esto ejecutará todas las pruebas unitarias y mostrará los resultados en la consola.
 
@@ -62,17 +60,37 @@ Esto ejecutará todas las pruebas unitarias y mostrará los resultados en la con
 
 Puedes crear un usuario enviando una solicitud POST a la siguiente ruta:
 
+```
 POST /api/users
+```
 
 **Cuerpo de la solicitud**:
 
-json
+```json
 {
-"id": "1",
-"email": "test@example.com",
-"name": "Test User"
+  "id": "1",
+  "email": "test@example.com",
+  "name": "Test User"
 }
+```
 
+## Estructura del Proyecto
+
+```
+hexagonal-express-api/
+├── src/
+│   ├── application/
+│   │   └── create-user.use-case.ts
+│   ├── domain/
+│   │   ├── user.entity.ts
+│   │   └── user.repository.ts
+│   └── infrastructure/
+│       └── user.repository.mysql.ts
+├── tests/
+│   └── create-user.use-case.test.ts
+├── package.json
+└── README.md
+```
 
 ## Contribuciones
 
