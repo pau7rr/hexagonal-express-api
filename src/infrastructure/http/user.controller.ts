@@ -3,11 +3,13 @@ import { FindUserUseCase } from '@/application/find-user.use-case';
 
 import { UserId } from '../../domain/user.entity';
 import { Request, Response } from 'express';
+import { FindAllUsersUseCase } from '@/application/find-all-users.use-case';
 
 export class UserController {
   constructor(
     private createUserUseCase: CreateUserUseCase,
-    private findUserUseCase: FindUserUseCase
+    private findUserUseCase: FindUserUseCase,
+    private findAllUsersUseCase: FindAllUsersUseCase
   ) {}
 
   async create(req: Request, res: Response): Promise<void> {
@@ -36,5 +38,14 @@ export class UserController {
       res.status(400).json({ error: error.message });
     }
     
+  }
+
+  async findAllUsers(req: Request, res: Response): Promise<void> {
+    try {
+      const users = await this.findAllUsersUseCase.execute()
+      res.status(200).json(users)
+    } catch (error: any) {
+      res.status(400).json({ error: error.message });
+    }
   }
 }
