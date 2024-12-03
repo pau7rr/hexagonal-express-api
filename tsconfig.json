@@ -7,14 +7,15 @@
       "skipLibCheck": true,
       "forceConsistentCasingInFileNames": true,
       "outDir": "./dist",
-      "rootDir": "./src",
+      "rootDir": ".",
       "experimentalDecorators": true,
       "emitDecoratorMetadata": true,
       "baseUrl": "./src",
       "paths": {
         "@/*": ["*"]
-      }
+      },
+      "types": ["jest"]
     },
-    "include": ["src/**/*"],
+    "include": ["src/**/*", "tests"],
     "exclude": ["node_modules", "dist"]
 }
