@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Hexagonal Express API es un proyecto scaffolding que implementa una arquitectura hexagonal utilizando Node.js y Express. Este enfoque permite una separación clara de las preocupaciones, facilitando la prueba y el mantenimiento del código. El proyecto incluye un caso de uso para la creación de usuarios y un repositorio simulado para pruebas, lo que ayuda a los desarrolladores a comenzar rápidamente sin tener que construir la estructura desde cero.
+Hexagonal Express API es un proyecto scaffolding que implementa una arquitectura hexagonal utilizando Node.js, Express Y Typescript. Este enfoque permite una separación clara de las preocupaciones, facilitando la prueba y el mantenimiento del código. El proyecto incluye un caso de uso para la creación de usuarios y un repositorio simulado para pruebas, lo que ayuda a los desarrolladores a comenzar rápidamente sin tener que construir la estructura desde cero.
 
 ## Ventajas
 
