@@ -69,8 +69,8 @@ POST /api/users
 ```json
 {
   "id": "1",
-  "email": "test@example.com",
-  "name": "Test User"
+  "name": "Test User",
+  "email": "test@example.com"  
 }
 ```
 
